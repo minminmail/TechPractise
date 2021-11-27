@@ -55,7 +55,7 @@ services:
     networks:
       - kafka-net
     volumes:
-      - ./:/app/
+      - ./:/app
 
     command:
       [
