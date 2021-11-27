@@ -55,7 +55,7 @@ services:
       - ./ApiAndProducer/bin:/app/
     command:
       [
-        "wait-for-it.sh",
+        "/app/wait-for-it.sh",
         "postgress:5432",
         "kafka-server:9092",
         "-t",
