@@ -4,8 +4,7 @@ networks:
   kafka-net:
     driver: bridge
 
-volumes:
-  - ApiAndProducer:/var/lib/docker/volumes/vsCodeServerVolume-TechPractise-recursing_cartwright/_data
+
 
 services:
   zookeeper-server:
@@ -16,6 +15,10 @@ services:
       - 2181:2181
     environment:
       - ALLOW_ANONYMOUS_LOGIN=yes
+    volumes:
+      - type: volume
+      - source: ApiAndProducer
+      - target: /var/lib/docker/volumes/vsCodeServerVolume-TechPractise-recursing_cartwright/_data
 
   kafka-server:
     image: bitnami/kafka:latest
