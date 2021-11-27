@@ -5,6 +5,7 @@ RUN adduser -D -g '' $APPLICATION_USER
 
 RUN apk update && apk add bash coreutils
 RUN mkdir /app
+COPY ApiAndProducer /app/ApiAndProducer/
 RUN chown -R $APPLICATION_USER /app
 
 USER $APPLICATION_USER

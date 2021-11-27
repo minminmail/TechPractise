@@ -56,13 +56,13 @@ services:
       - kafka-net
     
     volumes:
-      - ./ApiAndProducer/bin:/ApiAndProducer/bin
+      - ./ApiAndProducer/bin:/app
 
 
 
     command:
       [
-        "/ApiAndProducer/bin/wait-for-it.sh",
+        "./wait-for-it.sh",
         "postgress:5432",
         "kafka-server:9092",
         "-t",
