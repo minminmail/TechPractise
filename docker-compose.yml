@@ -4,6 +4,9 @@ networks:
   kafka-net:
     driver: bridge
 
+volumes:
+  - ApiAndProducer:/var/lib/docker/volumes/vsCodeServerVolume-TechPractise-recursing_cartwright/_data
+
 services:
   zookeeper-server:
     image: bitnami/zookeeper:latest
