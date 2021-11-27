@@ -54,8 +54,6 @@ services:
       - 9000:8080
     networks:
       - kafka-net
-    volumes:
-      - ./:/app
 
     command:
       [
