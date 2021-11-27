@@ -49,7 +49,7 @@ services:
       POSTGRES_DB: payments
 
   api-producer:
-    build: ./ApiAndProducer
+    build: ./ApiAndProducer/bin
     ports:
       - 9000:8080
     networks:
