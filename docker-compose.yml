@@ -55,7 +55,7 @@ services:
     networks:
       - kafka-net
     volumes:
-      - ./ApiAndProducer/bin:/usr/app
+      - /ApiAndProducer/bin
     command:
       [
         "./wait-for-it.sh",
