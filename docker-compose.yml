@@ -52,7 +52,7 @@ services:
     networks:
       - kafka-net
     volumes:
-      - ./ApiAndProducer/bin:/app
+      - ./var/lib/docker/volumes/vsCodeServerVolume-TechPractise-recursing_cartwright/_data
     command:
       [
         "./wait-for-it.sh",
