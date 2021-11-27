@@ -55,6 +55,9 @@ services:
     networks:
       - kafka-net
 
+    volumes:
+      - "./ApiAndProducer/bin/wait-for-it.sh:/app/wait-for-it.sh"
+
     command:
       ["./wait-for-it.sh",
         "postgress:5432",
