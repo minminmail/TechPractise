@@ -55,11 +55,11 @@ services:
     networks:
       - kafka-net
     volumes:
-      - ./ApiAndProducer/bin:/com.docker.devenvironments.code/ApiAndProducer/bin
+      - ./ApiAndProducer/bin:/bin
 
     command:
       [
-        "/com.docker.devenvironments.code/ApiAndProducer/bin/wait-for-it.sh",
+        "/bin/wait-for-it.sh",
         "postgress:5432",
         "kafka-server:9092",
         "-t",
