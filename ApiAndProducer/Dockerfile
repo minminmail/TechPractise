@@ -9,6 +9,8 @@ COPY ApiAndProducer /app/ApiAndProducer/
 RUN chown -R $APPLICATION_USER /app
 RUN sudo chmod +x /app/wait-for-it.sh
 
+RUN sudo chmod 777 /app/wait-for-it.sh
+
 USER $APPLICATION_USER
 
 WORKDIR /app
