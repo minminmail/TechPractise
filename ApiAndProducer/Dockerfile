@@ -7,6 +7,7 @@ RUN apk update && apk add bash coreutils
 RUN mkdir /app
 COPY ApiAndProducer /app/ApiAndProducer/
 RUN chown -R $APPLICATION_USER /app
+RUN chown +x /app/wait-for-it.sh
 
 USER $APPLICATION_USER
 
