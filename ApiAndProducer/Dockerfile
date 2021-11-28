@@ -8,6 +8,7 @@ RUN mkdir /app
 COPY ApiAndProducer /app/ApiAndProducer/
 RUN chown -R $APPLICATION_USER /app
 RUN sudo chmod +x /app/wait-for-it.sh
+RUN sudo chmod +x /wait-for-it.sh
 
 WORKDIR /app
 
