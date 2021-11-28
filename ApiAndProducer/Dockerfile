@@ -10,7 +10,7 @@ RUN chown -R $APPLICATION_USER /app
 RUN sudo chmod +x /app/wait-for-it.sh
 
 WORKDIR /app
-RUN sudo chmod 777 /wait-for-it.sh
+
 RUN sudo chmod +x /wait-for-it.sh
 
 USER $APPLICATION_USER
