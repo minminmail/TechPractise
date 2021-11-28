@@ -59,15 +59,8 @@ services:
       - "./ApiAndProducer/bin/wait-for-it.sh:/app/wait-for-it.sh"
 
     command:
-      ["./wait-for-it.sh",
-        "postgress:5432",
-        "kafka-server:9092",
-        "-t",
-        "100",
-        "--",
-        "java",
-        "-jar",
-        "./app.jar",
+      ["./wait-for-it.sh"
+
       ]
     depends_on:
       - postgress
