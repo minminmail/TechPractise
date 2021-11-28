@@ -9,12 +9,12 @@ COPY ApiAndProducer /app/ApiAndProducer/
 RUN chown -R $APPLICATION_USER /app
 RUN sudo chmod +x /app/wait-for-it.sh
 
-RUN cd /app
-RUN sudo chmod 777 wait-for-it.sh
-RUN sudo chmod +x wait-for-it.sh
+WORKDIR /app
+RUN sudo chmod 777 /wait-for-it.sh
+RUN sudo chmod +x /wait-for-it.sh
 
 USER $APPLICATION_USER
 
-WORKDIR /app
+
 
 CMD ["java", "-server", "-XX:+UnlockExperimentalVMOptions", "-XX:+UseCGroupMemoryLimitForHeap", "-XX:InitialRAMFraction=2", "-XX:MinRAMFraction=2", "-XX:MaxRAMFraction=2", "-XX:+UseG1GC", "-XX:MaxGCPauseMillis=100", "-XX:+UseStringDeduplication", "-jar", "app.jar"]
