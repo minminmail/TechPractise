@@ -12,7 +12,7 @@ RUN sudo chmod +x /wait-for-it.sh
 
 WORKDIR /app
 
-RUN sudo chmod +x ./wait-for-it.sh
+RUN sudo chmod +x wait-for-it.sh
 
 USER $APPLICATION_USER
 
